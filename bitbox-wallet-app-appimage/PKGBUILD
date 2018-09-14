@@ -1,0 +1,37 @@
+# BitBox-wallet-app-appimage: The BitBox wallet App in an AppImage.
+# Based on https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=upwork-appimage
+# Maintainer: Luis Aranguren <pizzaman@hotmail.com>
+
+_pkgname=bitbox
+_upkgname=BitBox
+pkgname=bitbox-wallet-app-appimage
+pkgver=4.1.0
+pkgrel=1
+pkgdesc="BitBox cryptocurrency hardware wallet desktop app with Bitcoin, Segwit, Bech32 and native Litecoin support in an AppImage"
+arch=('x86_64')
+url="https://shiftcrypto.ch/"
+license=('Apache')
+makedepends=('p7zip')
+noextract=("$_pkgname-$pkgver.AppImage")
+options=('!strip')
+validpgpkeys=('43C1F3ED7A624B6C75F79DDD4F35588AAF0E728A')
+
+source=("https://github.com/digitalbitbox/bitbox-wallet-app/releases/download/v$pkgver/BitBox-$pkgver-$arch.AppImage"{,.asc})
+sha256sums=('38f76285ac18815fec2a12caefd90104a4a41136860dbbae6f3676b7d85bce2d'
+	    'SKIP')
+
+prepare() {
+    cd "${srcdir}"
+    7z x "${srcdir}/$_upkgname-$pkgver-$CARCH.AppImage" $_pkgname.desktop
+    mkdir -p usr/share/applications
+    mkdir -p opt/appimages
+    mv $_pkgname.desktop usr/share/applications
+    cp $_upkgname-$pkgver-$CARCH.AppImage opt/appimages/
+
+}
+
+package() {
+    cd "${srcdir}"
+    cp -rp usr "${pkgdir}/usr"
+    cp -rp opt "${pkgdir}/opt"
+}
