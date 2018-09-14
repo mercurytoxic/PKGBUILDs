@@ -1,0 +1,19 @@
+pkgbase = lnd-git
+	pkgdesc = The Lightning Network Daemon, for secure off-chain bitcoin transactions.
+	pkgver = 0.5.beta.rc2.23.gd050cedd
+	pkgrel = 2
+	url = https://github.com/lightningnetwork/lnd
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = dep
+	makedepends = go
+	makedepends = fakeroot
+	depends = glibc
+	provides = lnd
+	provides = lnd-cli
+	source = lnd-git::git+https://github.com/lightningnetwork/lnd.git
+	md5sums = SKIP
+
+pkgname = lnd-git
+
