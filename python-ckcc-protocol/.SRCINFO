@@ -1,0 +1,22 @@
+pkgbase = python-ckcc-protocol
+	pkgdesc = Communicate with your Coldcard using Python
+	pkgver = 0.7.2
+	pkgrel = 00
+	url = https://github.com/Coldcard/ckcc-protocol
+	arch = any
+	license = LGPL3
+	makedepends = python-pip
+	depends = python
+	depends = python-pyaes
+	depends = python-hidapi
+	depends = python-ecdsa
+	noextract = ckcc_protocol-0.7.2-py3-none-any.whl
+	source = PKGBUILD_EXTRAS
+	source = https://files.pythonhosted.org/packages/a3/f1/de0333b5198729e69a79b69f46e42aafc025543860934cf40296716ceecc/ckcc_protocol-0.7.2-py3-none-any.whl
+	source = LICENSE
+	md5sums = SKIP
+	md5sums = 6996b02760bd5b39f0251e9098fdcab7
+	md5sums = 79bebac8bd3726f303d894bc5d29cb19
+
+pkgname = python-ckcc-protocol
+
