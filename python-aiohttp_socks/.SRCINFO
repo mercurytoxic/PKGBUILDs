@@ -1,6 +1,6 @@
 pkgbase = python-aiohttp_socks
 	pkgdesc = SOCKS proxy connector for aiohttp
-	pkgver = 20181102
+	pkgver = 20181211
 	pkgrel = 1
 	url = https://github.com/romis2012/aiohttp-socks
 	arch = x86_64
