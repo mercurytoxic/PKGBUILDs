@@ -1,0 +1,23 @@
+pkgbase = trezord-git
+	pkgdesc = TREZOR Communication Daemon
+	pkgver = 2.0.26.r0.g7a15878
+	pkgrel = 1
+	url = https://trezor.io/
+	arch = i686
+	arch = x86_64
+	license = LGPL3
+	makedepends = git
+	makedepends = go
+	provides = trezord
+	provides = trezor-bridge
+	conflicts = trezord
+	conflicts = trezor-bridge-bin
+	source = git://github.com/trezor/trezord-go.git
+	source = trezord.sysusers
+	source = trezord.patch
+	sha256sums = SKIP
+	sha256sums = efa561a7192a22088d1840278fc742b77f649fb3d949aa2a1d8644c681acd270
+	sha256sums = 39cdb6630e4843e3509fb91990df2631780c952d887f401eb0aa6ac523db0082
+
+pkgname = trezord-git
+
