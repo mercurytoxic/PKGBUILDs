@@ -1,4 +1,5 @@
-# Maintainer: Cedric Girard <girard.cedric@gmail.com>
+# Maintainer: Luis Aranguren <pizzaman@hotmail.com>
+# Contributor: Cedric Girard <girard.cedric@gmail.com>
 # Contributor: Tom <tomgparchaur@gmail.com>
 pkgname=cacti-spine
 pkgver=1.2.2
@@ -26,4 +27,3 @@ package() {
   make DESTDIR="${pkgdir}" install
   mv "${pkgdir}"/etc/spine.conf.dist "${pkgdir}"/etc/spine.conf
 }
-
