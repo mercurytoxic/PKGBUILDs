@@ -1,0 +1,21 @@
+pkgbase = imv-git
+	pkgdesc = imv is a command line image viewer intended for use with tiling window managers, with Wayland and X11 support.
+	pkgver = v2.1.3.r202.ge278e28
+	pkgrel = 1
+	url = https://github.com/eXeC64/imv
+	arch = x86_64
+	arch = i686
+	license = MIT
+	makedepends = git
+	makedepends = asciidoc
+	depends = freeimage
+	depends = sdl2_ttf
+	depends = fontconfig
+	provides = imv
+	conflicts = renameutils
+	conflicts = imv
+	source = git+https://github.com/eXeC64/imv.git
+	sha1sums = SKIP
+
+pkgname = imv-git
+
