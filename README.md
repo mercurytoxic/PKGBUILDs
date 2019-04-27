@@ -1,2 +1,2 @@
 # PKGBUILDs
-PKBUILD files for Arch Linux packages.
+PKBUILD files for Arch Linux AUR packages.
